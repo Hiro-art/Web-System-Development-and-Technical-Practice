@@ -1,0 +1,139 @@
+2022-03-14 21:08:30 ERROR  : Error connecting to the server: 致命错误:  用户 "postgres" Password 认证失败
+
+2022-03-14 21:08:39 ERROR  : Error connecting to the server: 致命错误:  用户 "postgres" Password 认证失败
+
+2022-03-14 21:08:51 ERROR  : Error connecting to the server: 致命错误:  用户 "postgres" Password 认证失败
+
+2022-03-16 09:42:10 ERROR  : Error connecting to the server: 致命错误:  没有用于主机 "192.168.1.107", 用户 "postgres", 数据库 "postgres", SSL 关闭 的 pg_hba.conf 记录
+
+2022-03-16 09:42:23 ERROR  : Error connecting to the server: 致命错误:  用户 "postgres" Password 认证失败
+
+2022-03-16 10:24:31 ERROR  : 错误:  字段 "name" 不存在
+LINE 1: select name
+               ^
+2022-03-16 10:35:07 ERROR  : 错误:  语法错误 在 "//" 或附近的
+LINE 2: SELECT *  //正则表达式
+                  ^
+2022-03-16 10:43:28 ERROR  : 错误:  函数 sum(character) 不存在
+LINE 1: select sum(distinct cNO)
+               ^
+HINT:  没有匹配指定名称和参数类型的函数. 您也许需要增加明确的类型转换.
+2022-03-16 10:46:23 ERROR  : 错误:  字段 "sc.sno" 必须出现在 GROUP BY 子句中或者在聚合函数中使用
+LINE 1: select sno,AVG(score)
+               ^
+2022-03-16 10:50:14 ERROR  : 错误:  语法错误 在 "order" 或附近的
+LINE 4: order by cNo;
+        ^
+2022-03-16 10:53:59 ERROR  : 错误:  字段 "sc.sno" 必须出现在 GROUP BY 子句中或者在聚合函数中使用
+LINE 1: select cno,sNo,count(*)
+                   ^
+2022-03-16 10:55:44 ERROR  : 错误:  语法错误 在 "select" 或附近的
+LINE 5: select *
+        ^
+2022-03-16 10:55:54 ERROR  : 错误:  字段 "sc.sno" 必须出现在 GROUP BY 子句中或者在聚合函数中使用
+LINE 1: select cno,sNo,count(*)
+                   ^
+2022-03-16 10:55:58 ERROR  : 错误:  字段 "sc.sno" 必须出现在 GROUP BY 子句中或者在聚合函数中使用
+LINE 1: select cno,sNo,count(*)
+                   ^
+2022-03-16 10:56:35 ERROR  : 错误:  字段 "sc.sno" 必须出现在 GROUP BY 子句中或者在聚合函数中使用
+LINE 1: select cno,sNo,count(*)
+                   ^
+2022-03-16 10:56:50 ERROR  : 错误:  字段 "sc.sno" 必须出现在 GROUP BY 子句中或者在聚合函数中使用
+LINE 1: select cno,sNo,count(*)
+                   ^
+2022-03-16 10:57:11 ERROR  : 错误:  字段 "sc.sno" 必须出现在 GROUP BY 子句中或者在聚合函数中使用
+LINE 1: select cNo,sNo,count(*)
+                   ^
+2022-03-16 10:57:25 ERROR  : 错误:  字段 "sc.sno" 必须出现在 GROUP BY 子句中或者在聚合函数中使用
+LINE 1: select cNo,sNo, count(*)
+                   ^
+2022-03-16 10:57:43 ERROR  : 错误:  字段 "sc.sno" 必须出现在 GROUP BY 子句中或者在聚合函数中使用
+LINE 1: select cNo, sNo, count(*)
+                    ^
+2022-03-16 10:59:00 ERROR  : 错误:  字段 "sc.sno" 必须出现在 GROUP BY 子句中或者在聚合函数中使用
+LINE 1: select cNo,sNo,count(*)
+                   ^
+2022-03-16 11:08:09 ERROR  : 错误:  字段 "sc.sno" 必须出现在 GROUP BY 子句中或者在聚合函数中使用
+LINE 1: select cNO,sno,AVG(score)
+                   ^
+2022-03-16 11:11:50 ERROR  : 错误:  语法错误 在 "(" 或附近的
+LINE 1: select dno count(sno)
+                        ^
+2022-03-16 11:28:03 ERROR  : 错误:  语法错误 在 "；" 或附近的
+LINE 3: where sname = '宁灿'；
+                            ^
+2022-03-16 11:33:43 ERROR  : 错误:  语法错误 在 "；" 或附近的
+LINE 8:     where cname = '矩阵论'))；
+                                    ^
+2022-03-16 11:34:01 ERROR  : 错误:  语法错误 在输入的末尾
+LINE 2:     from
+                ^
+2022-03-16 11:34:41 ERROR  : 错误:  作为一个表达式使用的子查询返回了多列
+2022-03-16 11:34:43 ERROR  : 错误:  作为一个表达式使用的子查询返回了多列
+2022-03-16 11:34:44 ERROR  : 错误:  作为一个表达式使用的子查询返回了多列
+2022-03-16 11:34:45 ERROR  : 错误:  作为一个表达式使用的子查询返回了多列
+2022-03-16 11:34:47 ERROR  : 错误:  作为一个表达式使用的子查询返回了多列
+2022-03-16 11:35:23 ERROR  : 错误:  作为一个表达式使用的子查询返回了多列
+2022-03-16 11:36:10 ERROR  : 错误:  作为一个表达式使用的子查询返回了多列
+2022-03-16 11:36:10 ERROR  : 错误:  作为一个表达式使用的子查询返回了多列
+2022-03-16 11:36:18 ERROR  : 错误:  作为一个表达式使用的子查询返回了多列
+2022-03-16 11:36:19 ERROR  : 错误:  作为一个表达式使用的子查询返回了多列
+2022-03-16 11:36:19 ERROR  : 错误:  作为一个表达式使用的子查询返回了多列
+2022-03-16 11:36:20 ERROR  : 错误:  作为一个表达式使用的子查询返回了多列
+2022-03-16 11:47:21 ERROR  : 错误:  语法错误 在 ";" 或附近的
+LINE 19:    where sname ='宁灿'););
+                                ^
+2022-03-16 11:47:29 ERROR  : 错误:  语法错误 在 ";" 或附近的
+LINE 11:        where sname ='宁灿';) );
+                                   ^
+2022-03-16 11:47:30 ERROR  : 错误:  语法错误 在 ";" 或附近的
+LINE 11:        where sname ='宁灿';) );
+                                   ^
+2022-03-16 11:48:10 ERROR  : 错误:  语法错误 在 ";" 或附近的
+LINE 19:    where sname ='宁灿'););
+                                ^
+2022-03-16 11:48:29 ERROR  : 错误:  语法错误 在 ";" 或附近的
+LINE 19:    where sname ='宁灿'););
+                                ^
+2022-03-16 11:48:34 ERROR  : 错误:  语法错误 在 ";" 或附近的
+LINE 12:        where sname ='宁灿') );
+                                      ^
+2022-03-16 11:48:50 ERROR  : 错误:  语法错误 在 ";" 或附近的
+LINE 12:        where sname ='宁灿';); );
+                                   ^
+2022-03-16 11:51:46 ERROR  : 错误:  aggregate functions are not allowed in WHERE
+LINE 3: where sname<avg(age);
+                    ^
+2022-03-16 11:51:54 ERROR  : 错误:  aggregate functions are not allowed in WHERE
+LINE 3: where sname < avg(age);
+                      ^
+2022-03-16 11:52:36 ERROR  : 错误:  aggregate functions are not allowed in WHERE
+LINE 3: where  age<avg(age)
+                   ^
+2022-03-16 11:52:51 ERROR  : 错误:  aggregate functions are not allowed in WHERE
+LINE 3: where  age<avg(age);
+                   ^
+2022-03-16 14:18:07 ERROR  : 错误:  语法错误 在 "where" 或附近的
+LINE 4: where sname LIKE '钱';
+        ^
+2022-03-16 14:18:23 ERROR  : 错误:  字段 "student.sno" 必须出现在 GROUP BY 子句中或者在聚合函数中使用
+LINE 1: select sno, sname,count(2022-age)
+               ^
+2022-03-17 09:44:39 ERROR  : 错误:  语法错误 在 "order" 或附近的
+LINE 4: order by cname;
+        ^
+2022-03-17 09:44:49 ERROR  : 错误:  语法错误 在 "order" 或附近的
+LINE 4: order by cno;
+        ^
+2022-03-17 09:53:12 ERROR  : 错误:  语法错误 在 "null" 或附近的
+LINE 3: where dno in null;
+                     ^
+2022-03-17 09:53:36 ERROR  : 错误:  操作符不存在: character <> integer
+LINE 3: where dno <>01
+                  ^
+HINT:  没有匹配指定名称和参数类型的操作符. 您也许需要增加明确的类型转换.
+2022-03-17 09:53:44 ERROR  : 错误:  操作符不存在: character <> integer
+LINE 3: where dno <> 01
+                  ^
+HINT:  没有匹配指定名称和参数类型的操作符. 您也许需要增加明确的类型转换.

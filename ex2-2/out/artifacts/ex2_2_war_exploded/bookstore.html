@@ -1,0 +1,256 @@
+<html>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+</head>
+
+<body bgcolor="#FFFFFF">
+<h1 align="center">A Book Store</h1>
+<hr>
+<p>
+    <b>Choose following information:</b>
+</p>
+<form method="post" action="http://localhost:8080/ex2_2_war_exploded/ShoppingCart">
+    <table width="500" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td width="69"><input type="checkbox" name="item"
+                                  value="Thinking in Java"></td>
+            <td width="431">Item1: Thinking in Java</td>
+        </tr>
+        <tr>
+            <td width="69"><input type="checkbox" name="item"
+                                  value="Head first servlets and JSP"></td>
+            <td width="431">Item2: Head first servlets and JSP</td>
+        </tr>
+        <tr>
+            <td width="69"><input type="checkbox" name="item"
+                                  value="Enterprise JavaBeans 3.0"></td>
+            <td width="431">Item3: Enterprise JavaBeans 3.0</td>
+        </tr>
+    </table>
+    <hr>
+    <p>
+        <input type="submit" name="btn_submit" value="Buy Now">
+    </p>
+</form>
+<p>&nbsp;</p>
+</body>
+</html>
+
+
+
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>我的购物车</title>-->
+<!--    <style type="text/css">-->
+<!--        tr {-->
+<!--            height: 50px;-->
+<!--        }-->
+<!--    </style>-->
+<!--    &lt;!&ndash;第一步引入jq&ndash;&gt;-->
+<!--    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>-->
+
+<!--    <script type="text/javascript">-->
+<!--        $(function() { /*页面加载完之后动态绑定事件*/-->
+<!--            $("tr:even").css("background", "#87CEFA  ");-->
+<!--            $("tr:odd").css("background", "#BBFF00");-->
+<!--            /*第二步实现全选*/-->
+<!--            //1.全选-->
+<!--            $("#chks").click(function() {-->
+<!--                //获取全选框的值-->
+<!--                var flag = $(this).prop("checked");-->
+<!--                //alert(flag);-->
+
+<!--                //根据全选框状态修改各个复选框的状态-->
+<!--                /*input[name=chk]&ndash;&gt;得到所有的复选框*/-->
+<!--                $("input[name=chk]").prop("checked", flag);-->
+<!--            });-->
+
+<!--            //2.完善全选(有一项未选中，全选消除)，给每个图书的复选框绑定单击事件-->
+<!--            $("input[name=chk]").click(judgeAll);-->
+
+<!--            //3.反选-->
+<!--            $("#fx").click(function() {-->
+<!--                //获取所有图书的复选框-->
+<!--                var arr = $("input[name=chk]");-->
+<!--                //所有图书复选框的状态取反-->
+<!--                arr.each(function() {-->
+<!--                    //先得到复选框之前的状态-->
+<!--                    var flag = $(this).prop("checked");-->
+<!--                    //在修改为相反的状态-->
+<!--                    $(this).prop("checked", !flag);-->
+<!--                });-->
+<!--                //判断修改全选框的状态-->
+<!--                judgeAll();-->
+<!--            });-->
+
+<!--            /*第三步实现购物车新增、删除功能*/-->
+<!--            //4.新增一行-->
+<!--            $("#addRow").click(function(){-->
+<!--                $("tr:odd").css("background", "#87CEFA  ");-->
+<!--                $("tr:even").css("background", "#BBFF00");-->
+<!--                //创建一个新行-->
+<!--                var newRow = $('<tr>'+-->
+<!--                    '<td><input type="checkbox" name="chk" id="" value="3" /></td>'+-->
+<!--                    '<td>《java从入门到精通》</td>'+-->
+<!--                    '<td>明日科技</td>'+-->
+<!--                    '<td>10</td>'+-->
+<!--                    '<td>'+-->
+<!--                    '<input type="button" name="" id="" value="修改数量" onclick="updateAmount(this)" />'+-->
+<!--                    '<input type="button" name="" id="" value="删除" onclick="delRow(this)" />'+-->
+<!--                    '</td>'+-->
+<!--                    '</tr>');-->
+
+<!--                //把新增的行数添加到表格的最后-->
+<!--                $("tr:last").after(newRow);-->
+
+<!--            });-->
+
+<!--            //6.新增多行（复制行）-->
+<!--            $("#copyRow").click(function(){-->
+<!--                //获取所有被选中的复选框-->
+<!--                var arr = $("input[name=chk]:checked");-->
+<!--                //在克隆（复制）一份，要不就是移动-->
+<!--                var cloneAll = arr.parents("tr").clone();-->
+<!--                //把增加的添加到表格的最后-->
+<!--                $("tr:last").after(cloneAll);-->
+<!--            });-->
+
+<!--            //7.删除多行-->
+<!--            $("#delRow").click(function(){-->
+<!--                //获取所有被选中的复选框-->
+<!--                var arr = $("input[name=chk]:checked");-->
+<!--                //完后删除操作-->
+<!--                if(arr.length==0){-->
+<!--                    alert("快点去选择删除的图书");-->
+<!--                }else{-->
+<!--                    arr.parents("tr").remove();/*jq中的隐藏的迭代*/-->
+<!--                }-->
+<!--            });-->
+
+<!--        });-->
+
+<!--        //5.删除一行-->
+<!--        function delRow(obj){-->
+<!--            //$(obj).parent().parent().remove();-->
+<!--            $(obj).parents("tr").remove();-->
+<!--        }-->
+
+<!--        //8.修改数量-->
+<!--        function updateAmount(obj){-->
+<!--            //1.10-&#45;&#45;<input value='10';>-->
+<!--            //1.1  找到数量所在的td-->
+<!--            var  numCell = $(obj).parent().prev();-->
+<!--            //console.info(numCell);-->
+
+<!--            //1.2获取数量-->
+<!--            var num = numCell.html();-->
+
+<!--            //1.3修改数量所在的td的内容，修改为input-->
+<!--            numCell.html('<input type="text" onblur="checkNum(this)" value="'+num+'">');-->
+
+
+
+<!--            //<input type="button" name="" id="" value="修改数量"  -&#45;&#45;&#45;&#45;  <input type="button" name="" id="" value="确定"-->
+<!--            $(obj).parent().html('<input type="button" name="" id="" value="确定" onclick="confirmAmount(this)" />'+-->
+<!--                '<input type="button" name="" id="" value="删除" onclick="delRow(this)" />');-->
+<!--        }-->
+
+<!--        //9.确定数量-->
+<!--        function confirmAmount(obj){-->
+<!--            //1.<input value='10';> -&#45;&#45; 10-->
+<!--            //1.1  找到数量所在的td-->
+<!--            var  numCell = $(obj).parent().prev();-->
+<!--            //1.2获取数量-->
+<!--            var num = numCell.find("input").val();-->
+<!--            //1.3修改数量所在的td的内容，将input直接修改为数量-->
+<!--            /*alert(num)*/-->
+<!--            numCell.html(num);-->
+
+<!--            //2.<input type="button" name="" id="" value="确定"  -&#45;&#45;&#45;&#45;   <input type="button" name="" id="" value="修改数量"-->
+<!--            $(obj).parent().html('<input type="button" name="" id="" value="修改数量" onclick="updateAmount()(this)" />'+-->
+<!--                '<input type="button" name="" id="" value="删除" onclick="delRow(this)" />');-->
+
+<!--        }-->
+
+
+<!--        //10.验证数量-->
+<!--        function checkNum(obj){-->
+<!--            var num = $(obj).val();-->
+<!--            if(isNaN(num) || num<0 || parseInt(num) != num){-->
+<!--                alert("必须是整数");-->
+<!--            }-->
+<!--        }-->
+
+<!--        //判断全选(提取方法，便于重用)-->
+<!--        function judgeAll() {-->
+<!--            //判断所有图书复选框的状态-->
+<!--            var flag = true;-->
+<!--            $("input[name=chk]").each(function(){-->
+<!--                var f = $(this).prop("checked");-->
+<!--                if(f == false) {-->
+<!--                    flag = false;-->
+<!--                    return;-->
+<!--                }-->
+<!--            });-->
+<!--            //根据所有图书复选框的状态修改全选框的状态-->
+<!--            $("#chks").prop("checked", flag);-->
+<!--        }-->
+<!--    </script>-->
+
+
+<!--</head>-->
+
+<!--<body>-->
+<!--<h3>jQuery操作表格</h3>-->
+<!--<hr/>-->
+<!--<input type="button" id="fx" value="反选" />-->
+<!--<input type="button" id="addRow" value="新增一行" />-->
+<!--<input type="button" id="delRow" value="删除多行" />-->
+<!--<input type="button" id="copyRow" value="复制行" />-->
+<!--<table border="1px" cellpadding="10px" cellspacing="0" id="ta">-->
+<!--    <tr>-->
+<!--        <td width="50px"><input type="checkbox" name="chks" id="chks" value="1" /></td>-->
+<!--        <td width="300px">书名</td>-->
+<!--        <td width="300px">作者</td>-->
+<!--        <td width="300px">数量</td>-->
+<!--        <td width="300px">价格（元）</td>-->
+<!--        <td width="300px">操作</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td><input type="checkbox" name="chk" value="2" /></td>-->
+<!--        <td>《数据结构》</td>-->
+<!--        <td>程杰</td>-->
+<!--        <td>10</td>-->
+<!--        <td>89.5</td>-->
+<!--        <td>-->
+<!--            <input type="button" name="aa" value="修改数量" />-->
+<!--            <input type="button" name="" value="删除" />-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td><input type="checkbox" name="chk" value="3" /></td>-->
+<!--        <td>《java从入门到精通》</td>-->
+<!--        <td>明日科技</td>-->
+<!--        <td>10</td>-->
+<!--        <td>-->
+<!--            <input type="button" name="" value="修改数量" onclick="updateAmount(this)" />-->
+<!--            <input type="button" name="" value="删除" onclick="delRow(this)" />-->
+
+<!--        </td>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--        <td><input type="checkbox" name="chk" value="4" /></td>-->
+<!--        <td>《web开发详解》</td>-->
+<!--        <td>张老师</td>-->
+<!--        <td>30</td>-->
+<!--        <td>-->
+<!--            <input type="button" name="" value="修改数量" onclick="updateAmount(this)"/>-->
+<!--            <input type="button" name="" value="删除" />-->
+
+<!--        </td>-->
+<!--    </tr>-->
+
+<!--</table>-->
+<!--</body>-->

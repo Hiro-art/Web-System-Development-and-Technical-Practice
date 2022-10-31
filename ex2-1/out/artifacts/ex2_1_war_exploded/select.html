@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>数据请求页面</title>
+        <style type="text/css">
+            #upload{
+                margin-top: 300px;
+                margin-left: 600px;
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="upload">
+            <form action="http://localhost:8080/ex2_1_war_exploded/SelectBeerServlet" method="post">
+                <h2>PayLoad</h2>
+                <p>color:&nbsp;<input type="text" name="color"></p>
+                <p>taste:&nbsp;<input type="text" name="taste"></p>
+                <p>
+                    <input type="submit">
+                    <input type="reset">
+                </p>
+            </form>
+        </div>
+    </body>
+</html>

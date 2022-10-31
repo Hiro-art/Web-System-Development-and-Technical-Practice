@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstarp框架的CSS和JavaScript文件链接 -->
+  <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="icon" href="./images/小熊猫.ico" type="images/x-ico" />
+  <title>Eric Tea</title>
+</head>
+
+<body>
+
+  <header>
+    <div id="header-container">
+      <div id="title-tea" class="title">ERIC TEA</div>
+      <div id="icons-container-right">
+
+        <a href="https://www.facebook.com/" target="_blank">
+          <div class="icon icon-facebook"></div>
+        </a>
+        <a href="https://twitter.com/home" target="_blank">
+          <div class="icon icon-twitter"></div>
+        </a>
+        <a href="https://github.com/" target="_blank">
+          <div class="icon icon-github"></div>
+        </a>
+        <a href="https://linkedin.com/" target="_blank">
+          <div class="icon icon-linkedin"></div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="cotainer">
+      <!-- 此处添加alert-primary -->
+    <div class="intro" role="alert">
+      <!-- <img src="http://5b0988e595225.cdn.sohucs.com/images/20170929/a4689cb406a04c1bb11a9f06cd4c9121.jpeg" width="200px" height="200px" alt="avatar" /> -->
+      <img src="./images/OIP.jpg" width="200px" height="200px" alt="avatar"/>
+      <h1>Jia Xiaoning</h1>
+      <!-- 标识了一个3级标题id，为了方便再CSS中更改字体 -->
+      <h3 id="h3-style">A Web-Novice from NWPU</h3>
+      <p id="quote" class="outset">Nurture &nbsp;&nbsp;&nbsp; passes &nbsp;&nbsp;&nbsp; nature &nbsp;&nbsp;&nbsp; 教养胜过天性</p>
+    </div>
+
+    <br><br><br>
+    
+    <div class="about-grid">
+      <div class="i-am">
+        <h3>现有身份</h3>
+        <ul class="about-list">
+          <li>A Student</li>
+          <li>A Player</li>
+          <li>A Culinary Lover</li>
+        </ul>
+      </div>
+      <div class="i-like">
+        <h3>兴趣爱好</h3>
+        <ul class="about-list">
+          <li>Meet new people</li>
+          <li>Play Basketball</li>
+          <li>Doing Bodybuilding</li>
+        </ul>
+      </div>
+    </div>
+
+    <br><br><br>
+    
+    <div>
+      <h3 class="projects-heading">My Projects</h3>
+      <div class="projects-grid">
+        <img class="project-image" src="./images/C61Bg7dWwAIOMgg.jpg"/ width="500px">
+        <img class="project-image" src="./images/C61BktcWwAAfEUG.jpg"/ width="500px">
+        <img class="project-image" src="./images/C61BQOzWwAERIzS.jpg" width="500px"/>
+        <img class="project-image" src="./images/C61BTSIWoAg91C-.jpg"/ width="500px">
+      </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="list-group" >
+      <a href="javascript:;" class="list-group-item list-group-item-action active">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1" >Links</h5>
+        </div>
+        <p class="mb-1">关注/联系我</p>
+        <small>（建议以下方式）</small>
+      </a>
+      <a href="https://github.com/Hiro-art" class="list-group-item list-group-item-action" target="_blank">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Github</h5>
+        </div>
+        <p class="mb-1">https://github.com/Hiro-art</p>
+        <small class="text-muted">全球最大代码托管平台</small>
+      </a>
+      <a href="https://twitter.com/home" class="list-group-item list-group-item-action" target="_blank">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Twitter</h5>
+        </div>
+        <p class="mb-1">https://twitter.com/home</p>
+        <small class="text-muted">全球性社交平台--蓝小鸟</small>
+      </a>
+      <a href="https://linkedin.com" class="list-group-item list-group-item-action" target="_blank">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Linkedin</h5>
+        </div>
+        <p class="mb-1">https://linkedin.com</p>
+        <small class="text-muted">全球领先职场社交平台</small>
+      </a>
+    </div>
+
+    <br><br><br>
+      <!-- 以下是联系表格的信息交互部分 -->
+    <div>
+      <form action="#">
+        <div class="form-group">
+          <h3>联系表单</h3>
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <input type="message" class="form-control" id="message">
+        </div>
+        <!-- <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> -->
+
+      </form>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" id="submit-button" data-toggle="modal" data-target="#exampleModal" >
+        提交信息
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div id="out-input" class="modal-body"></div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+
+
+    <footer>
+      <div id="footer-container">
+        <ul class="under-page">
+          <li class="under-li"><a class="active" href="#">Back to Top</a></li>
+          <li class="under-li"><a href="javascript:;">学习链接</a></li>
+          <li class="under-li"><a href="https://www.w3schools.com/html/default.asp" >HTML</a></li>
+          <li class="under-li"><a href="https://www.w3schools.com/css/default.asp">CSS</a></li>
+          <li class="under-li"><a href="https://www.w3schools.com/js/default.asp">JavaScript</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <link rel="stylesheet" href="style.css">
+  </div>
+
+</body>
+
+<!-- <script src="jquery.slim.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+<script src="script.js"></script> -->
+
+
+
+</html>

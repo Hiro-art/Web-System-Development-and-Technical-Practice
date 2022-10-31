@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <welcome-file-list>
+        <welcome-file>output.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- 配置整个web应用的初始化参数 -->
+    <!-- 作用于全局 -->
+    <context-param>
+        <param-name>admin-email</param-name>
+        <param-value>jia13660828690@163.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>admin-tel</param-name>
+        <param-value>13660828690</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>TestInitParams</servlet-name>
+        <servlet-class>TestInitParams</servlet-class>
+        <!-- 作用于局部 -->
+        <init-param>
+            <param-name>admin-QQ</param-name>
+            <param-value>1074924189</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestInitParams</servlet-name>
+        <url-pattern>/TestInitParams</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SelectBeerServlet</servlet-name>
+        <servlet-class>SelectBeerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SelectBeerServlet</servlet-name>
+        <url-pattern>/SelectBeerServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <display-name>CodeReturn</display-name>
+        <servlet-name>CodeReturn</servlet-name>
+        <servlet-class>CodeReturn</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CodeReturn</servlet-name>
+        <url-pattern>/CodeReturn</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>UploadServlet</display-name>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>UploadServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/UploadServlet</url-pattern>
+    </servlet-mapping>
+</web-app>

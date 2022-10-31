@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录页面</title>
+
+  <style type="text/css">
+    body {
+      background-image: url("https://pic3.zhimg.com/v2-151e99b266658dfbea240d817d4b050a_r.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-attachment: fixed;  
+    }
+    .main {
+      width: 590px;
+      height: 250px;
+      box-shadow: 0 5px 20px 0 #e8e8e8;
+      background-color: white;
+      border-radius: 10px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+    .main h2 {
+      color: lightseagreen;
+      margin-left: 50px ;
+    }
+    .form {
+      margin-top: 30px;
+      margin-left: 60px;
+    }
+    .form input {
+      width: 300px;
+      height: 25px;
+      border: 1px solid lightgray;
+      outline: none;      /*输入内容时不显示边框*/
+    }
+    .form #checkbox{
+      width: 50px;
+      height: 15px;
+      border: 1px solid lightgray;
+      /*border: 1px solid lightgray;*/
+      outline: none;
+    }
+    .form button {
+      width: 200px;
+      height: 30px;
+      color: white;
+      background-color: lightseagreen;
+      border-style: none;
+      border-radius: 5px;
+      font-size: 15px;
+      margin-top: 15px;
+      margin-left: 130px;
+      outline: none;
+      cursor: pointer;    /*光标放到上面有小手*/
+    }
+  </style>
+
+
+
+</head>
+<body>
+  <div class="main">
+    <h2>Welcome to the online shopping system!</h2>
+    <form action="http://localhost:8080/ex2_2_war_exploded/Login" class="form" method="post">
+      User Name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="txt" name="username">
+      <br><br>
+      Login password: <input type="password" name="password">
+      <br><br>
+      Automatic log-in <input type="checkbox" name="remember" value="on" id="checkbox">
+      <br>
+      <button type="submit" onclick="submit()">Login</button>
+
+    </form>
+  </div>
+</body>
+</html>
