@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <welcome-file-list>
+        <welcome-file>SelectBeer.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>Show DarkBeer</servlet-name>
+        <servlet-class>lesson.j2ee.ex3.ShowDarkBeer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Show DarkBeer</servlet-name>
+        <url-pattern>/ShowDarkBeer</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ShoppingCart</servlet-name>
+        <servlet-class>lesson.j2ee.ex3.ShoppingCart</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShoppingCart</servlet-name>
+        <url-pattern>/ShoppingCart.do</url-pattern>
+    </servlet-mapping>
+    <!--增加taglib配置项-->
+    <jsp-config>
+        <taglib>
+            <taglib-uri>MyFirstTag</taglib-uri>
+            <taglib-location>/WEB-INF/tld/MyTag.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+</web-app>
