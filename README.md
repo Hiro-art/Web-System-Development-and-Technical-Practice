@@ -1,6 +1,5 @@
 # Web-System-Development-and-Technical-Practice
 西北工业大学Web应用系统开发
-持续更新中
 
 ---
 
